@@ -1,0 +1,76 @@
+{
+  "name": "carbonblackcsv",
+  "version": "1.0.0",
+  "description": "Electron app that downloads data from Carbon Black Defense and exports to CSV file. ",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm install && electron ./app",
+    "pack": "build --dir",
+    "dist": "build",
+    "package-mac": "electron-packager . --overwrite --asar=true --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Tutorial App\"",
+    "package-linux": "electron-packager . --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds",
+    "create-installer-mac": "electron-installer-dmg ./release-builds/Electron\\ tutorial\\ app-darwin-x64/Electron\\ tutorial\\ app.app electron-tutorial-app --out=release-builds --overwrite --icon=assets/icons/mac/icon.icns",
+    "create-installer-win": "node installers/windows/createinstaller.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cw00dw0rd/carbonblackcsv.git"
+  },
+  "keywords": [
+    "Carbon",
+    "Black",
+    "Carbon",
+    "Black",
+    "Defense",
+    "CB-Defense",
+    "Electron",
+    "Javascript",
+    "CSV"
+  ],
+  "author": "Chris Woodward",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cw00dw0rd/carbonblackcsv/issues"
+  },
+  "homepage": "https://github.com/cw00dw0rd/carbonblackcsv#readme",
+  "build": {
+    "appId": "CBDefensetoCSV",
+    "asar": true,
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "squirrel",
+      "icon": "build/icon.ico"
+    }
+  },
+  "devDependencies": {
+    "electron": "^2.0.4",
+    "electron-builder": "^20.24.5",
+    "electron-winstaller": "^2.6.4",
+    "standard": "^11.0.1"
+  },
+  "dependencies": {
+    "electron-packager": "^12.1.0",
+    "json-2-csv": "^2.2.0"
+  }
+}

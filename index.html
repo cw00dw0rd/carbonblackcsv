@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://api-prod05.conferdeploy.net; script-src 'self' 'unsafe-inline'">
+  <title>Carbon Black to CSV</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+  <div>
+    <button id='closeBtn' href="javascript:window.close()">X</button>
+  </div>
+  <section class="content">
+  </section>
+  <h1>Carbon Black to CSV</h1>
+  <div class='mainButtonDiv'>
+    <button class= 'mainButtons' id='getDevices'>DEVICES</button>
+    <button class= 'mainButtons' id='weaponize'>WEAPONIZE</button>
+    <button class= 'mainButtons' id='delExpl'>DELIVER/EXPL</button>
+    <button class= 'mainButtons' id='instRun'>INST/RUN</button>
+    <button class= 'mainButtons' id='cmdCtrl'>CMD+CTRL</button>
+    <button class= 'mainButtons' id='execGoal'>EXECUTE GOAL</button>
+
+  </div>
+  <script>
+// eslint-disable-next-line
+    window.eval = global.eval = function () {
+  throw new Error(`Sorry, this app does not support window.eval().`)
+}
+require('./js/renderer.js')
+require('./js/app.js')
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+.apiButtonsDiv {
+  margin: 50px;
+}
+input {
+  width: 40%;
+  margin-right: 15%
+}
+label {
+  font-weight: bold;
+  float: left;
+  width:35%;
+  text-align: right;
+  display: inline-block;
+}
