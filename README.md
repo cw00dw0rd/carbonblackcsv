@@ -13,4 +13,4 @@ Currently, due to the nature of the content supplied, you must supply your own A
 
 
 ## What now?
-I hope you can get some benefit out of this application. If you use Carbon Black Defense and think that maybe this application could be made a bit more useful, I'd love to give it some functionality. This will be a part of my portfolio as well and as of the time of this commit, I am searching for a new job, so please reach out to me if you'd like me on your team! 
+I hope you can get some benefit out of this application. If you use Carbon Black Defense and think that maybe this application could be made a bit more useful, I'd love to give it some functionality. This will be a part of my portfolio as well and as of the time of this commit, I am searching for a new job, so please reach out to me if you'd like me on your team! !
